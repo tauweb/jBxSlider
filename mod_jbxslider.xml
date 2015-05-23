@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="install">
+    <name>mod_jbxslider</name>
+    <author>Tkachenko Aleksey</author>
+    <creationDate>May 2015</creationDate>
+    <copyright>Copyright (C) 2005 - 2015 Open Source Matters. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>whiskeyman.tau@gmail.com</authorEmail>
+    <authorUrl>whiskeyman.ru</authorUrl>
+    <version>1.1.0</version>
+    <description>MOD_JBXSLIDER_XML_DESCRIPTION</description>
+
+    <scriptfile>script.mod_jbxslider.php</scriptfile>
+
+    <files>
+        <folder>language</folder>
+        <folder>slides</folder>
+        <folder>tmpl</folder>
+        <filename>mod_jbxslider.xml</filename>
+        <filename module="mod_jbxslider">mod_jbxslider.php</filename>
+        <filename>helper.php</filename>
+        <filename>script.mod_jbxslider.php</filename>
+    </files>
+
+    <languages>
+        <language tag="en-GB">en-GB.mod_JBXSLIDER.ini</language>
+        <language tag="en-GB">en-GB.mod_JBXSLIDER.sys.ini</language>
+        <language tag="ru-RU">ru-RU.mod_JBXSLIDER.ini</language>
+        <language tag="ru-RU">ru-RU.mod_JBXSLIDER.sys.ini</language>
+    </languages>
+    <help key="JHELP_EXTENSIONS_MODULE_MANAGER_JBXSLIDER" />
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="type"
+                    type="text"
+                    default="jpg"
+                    label="MOD_JBXSLIDER_FIELD_TYPE_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_TYPE_DESC" />
+                <field
+                    name="folder"
+                    type="text"
+                    default="images/jbxslider"
+                    label="MOD_JBXSLIDER_FIELD_FOLDER_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_FOLDER_DESC" />
+            </fieldset>
+            <!-- Slide options -->
+            <fieldset name="options">
+              <!-- General group slider settings -->
+                <field type="spacer" label="COM_JBXSLIDER_OPTIONS_GENERAL_LABEL" />
+                <field type="spacer" hr="true" />
+                <field
+                    name="mode"
+                    type="list"
+                    default="horizontal"
+                    label="MOD_JBXSLIDER_FIELD_MODE_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_MODE_DESC" >
+                    <option value="horizontal">MOD_JBXSLIDER_FIELD_MODE_OPTION_HORIZONTAL</option>
+                    <option value="vertical">MOD_JBXSLIDER_FIELD_MODE_OPTION_VERTICAL</option>
+                    <option value="fade">MOD_JBXSLIDER_FIELD_MODE_OPTION_FADE</option>
+                </field>
+                <field
+                    name="speed"
+                    type="number"
+                    default="500"
+                    label="MOD_JBXSLIDER_FIELD_SPEED_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_SPEED_DESC" />
+                <field
+                    name="slideMargin"
+                    type="number"
+                    default="0"
+                    label="MOD_JBXSLIDER_FIELD_SLIDEMARGIN_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_SLIDEMARGIN_DESC" />
+                <field
+                    name="startSlide"
+                    type="number"
+                    default="1"
+                    label="MOD_JBXSLIDER_FIELD_STARTSLIDE_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_STARTSLIDE_DESC" />
+                <field
+                    name="randomStart"
+                    type="radio"
+                    default="0"
+                    label="MOD_JBXSLIDER_FIELD_RANDOMSTART_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_RANDOMSTART_DESC" >
+                    <option value="0">MOD_JBXSLIDER_FIELD_OPTION_FALSE</option>
+                    <option value="1">MOD_JBXSLIDER_FIELD_OPTION_TRUE</option>
+                  </field>
+                <field
+                    name="slideSelector"
+                    type="text"
+                    default=""
+                    label="MOD_JBXSLIDER_FIELD_SLIDESELECTOR_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_SLIDESELECTOR_DESC" />
+                <field
+                    name="infiniteLoop"
+                    type="radio"
+                    default="1"
+                    label="MOD_JBXSLIDER_FIELD_INFINITELOOP_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_INFINITELOOP_DESC" >
+                    <option value="0">MOD_JBXSLIDER_FIELD_OPTION_FALSE</option>
+                    <option value="1">MOD_JBXSLIDER_FIELD_OPTION_TRUE</option>
+                  </field>
+                <field
+                    name="hideControlOnEnd"
+                    type="radio"
+                    default="0"
+                    label="MOD_JBXSLIDER_FIELD_HIDECONTROLONEND_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_HIDECONTROLONEND_DESC" >
+                    <option value="0">MOD_JBXSLIDER_FIELD_OPTION_FALSE</option>
+                    <option value="1">MOD_JBXSLIDER_FIELD_OPTION_TRUE</option>
+                </field>
+                <field
+                    name="easing"
+                    type="text"
+                    default=""
+                    label="MOD_JBXSLIDER_FIELD_EASING_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_EASING_DESC" />
+                <field
+                    name="captions"
+                    type="radio"
+                    default="0"
+                    label="MOD_JBXSLIDER_FIELD_CAPTIONS_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_CAPTIONS_DESC" >
+                    <option value="0">MOD_JBXSLIDER_FIELD_OPTION_FALSE</option>
+                    <option value="1">MOD_JBXSLIDER_FIELD_OPTION_TRUE</option>
+                </field>
+                <field
+                    name="ticker"
+                    type="radio"
+                    default="0"
+                    label="MOD_JBXSLIDER_FIELD_TICKER_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_TICKER_DESC" >
+                    <option value="0">MOD_JBXSLIDER_FIELD_OPTION_FALSE</option>
+                    <option value="1">MOD_JBXSLIDER_FIELD_OPTION_TRUE</option>
+                </field>
+                <field
+                    name="tickerHover"
+                    type="radio"
+                    default="0"
+                    label="MOD_JBXSLIDER_FIELD_TICKERHOVER_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_TICKERHOVER_DESC" >
+                    <option value="0">MOD_JBXSLIDER_FIELD_OPTION_FALSE</option>
+                    <option value="1">MOD_JBXSLIDER_FIELD_OPTION_TRUE</option>
+                </field>
+                <field
+                    name="adaptiveHeight"
+                    type="radio"
+                    default="0"
+                    label="MOD_JBXSLIDER_FIELD_ADAPTIVEHEIGHT_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_ADAPTIVEHEIGHT_DESC" >
+                    <option value="0">MOD_JBXSLIDER_FIELD_OPTION_FALSE</option>
+                    <option value="1">MOD_JBXSLIDER_FIELD_OPTION_TRUE</option>
+                </field>
+                <field
+                    name="adaptiveHeightSpeed"
+                    type="number"
+                    default="500"
+                    label="MOD_JBXSLIDER_FIELD_ADAPTIVEHEIGHTSPEED_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_ADAPTIVEHEIGHTSPEED_DESC" />
+                <field
+                    name="video"
+                    type="radio"
+                    default="0"
+                    label="MOD_JBXSLIDER_FIELD_VIDEO_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_VIDEO_DESC" >
+                    <option value="0">MOD_JBXSLIDER_FIELD_OPTION_FALSE</option>
+                    <option value="1">MOD_JBXSLIDER_FIELD_OPTION_TRUE</option>
+                </field>
+                <field
+                    name="responsive"
+                    type="radio"
+                    default="1"
+                    label="MOD_JBXSLIDER_FIELD_RESPONSIVE_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_RESPONSIVE_DESC" >
+                    <option value="0">MOD_JBXSLIDER_FIELD_OPTION_FALSE</option>
+                    <option value="1">MOD_JBXSLIDER_FIELD_OPTION_TRUE</option>
+                </field>
+                <field
+                    name="useCSS"
+                    type="radio"
+                    default="1"
+                    label="MOD_JBXSLIDER_FIELD_USECSS_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_USECSS_DESC" >
+                    <option value="0">MOD_JBXSLIDER_FIELD_OPTION_FALSE</option>
+                    <option value="1">MOD_JBXSLIDER_FIELD_OPTION_TRUE</option>
+                </field>
+                <field
+                    name="preloadImages"
+                    type="radio"
+                    default="visible"
+                    label="MOD_JBXSLIDER_FIELD_PRELOADIMAGES_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_PRELOADIMAGES_DESC" >
+                    <option value="visible">MOD_JBXSLIDER_FIELD_MODE_OPTION_VISIBLE</option>
+                    <option value="all">MOD_JBXSLIDER_FIELD_MODE_OPTION_ALL</option>
+                </field>
+                <field
+                    name="touchEnabled"
+                    type="radio"
+                    default="1"
+                    label="MOD_JBXSLIDER_FIELD_TOUCHENABLED_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_TOUCHENABLED_DESC" >
+                    <option value="0">MOD_JBXSLIDER_FIELD_OPTION_FALSE</option>
+                    <option value="1">MOD_JBXSLIDER_FIELD_OPTION_TRUE</option>
+                </field>
+                <field
+                    name="swipeThreshold"
+                    type="number"
+                    default="50"
+                    label="MOD_JBXSLIDER_FIELD_SWIPETHRESHOLD_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_SWIPETHRESHOLD_DESC" />
+                <field
+                    name="oneToOneTouch"
+                    type="radio"
+                    default="1"
+                    label="MOD_JBXSLIDER_FIELD_ONETOONETOUCH_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_ONETOONETOUCH_DESC" >
+                    <option value="0">MOD_JBXSLIDER_FIELD_OPTION_FALSE</option>
+                    <option value="1">MOD_JBXSLIDER_FIELD_OPTION_TRUE</option>
+                </field>
+                <field
+                    name="preventDefaultSwipeX"
+                    type="radio"
+                    default="1"
+                    label="MOD_JBXSLIDER_FIELD_PREVENTDEFAULTSWIPEX_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_PREVENTDEFAULTSWIPEX_DESC" >
+                    <option value="0">MOD_JBXSLIDER_FIELD_OPTION_FALSE</option>
+                    <option value="1">MOD_JBXSLIDER_FIELD_OPTION_TRUE</option>
+                </field>
+                <field
+                    name="preventDefaultSwipeY"
+                    type="radio"
+                    default="0"
+                    label="MOD_JBXSLIDER_FIELD_PREVENTDEFAULTSWIPEY_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_PREVENTDEFAULTSWIPEY_DESC" >
+                    <option value="0">MOD_JBXSLIDER_FIELD_OPTION_FALSE</option>
+                    <option value="1">MOD_JBXSLIDER_FIELD_OPTION_TRUE</option>
+                </field>
+
+                <!-- Pager group settings =======================================================-->
+                <field type="spacer"  label="COM_JBXSLIDER_OPTIONS_PAGER_LABEL" />
+                <field type="spacer" hr="true" />
+                <field
+                    name="pager"
+                    type="radio"
+                    default="1"
+                    label="MOD_JBXSLIDER_FIELD_PAGER_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_PAGER_DESC" >
+                    <option value="0">MOD_JBXSLIDER_FIELD_OPTION_FALSE</option>
+                    <option value="1">MOD_JBXSLIDER_FIELD_OPTION_TRUE</option>
+                </field>
+                <field
+                    name="pagerType"
+                    type="list"
+                    default="full"
+                    label="MOD_JBXSLIDER_FIELD_PAGERTYPE_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_PAGERTYPE_DESC" >
+                    <option value="full">MOD_JBXSLIDER_FIELD_PAGERTYPE_OPTION_FULL</option>
+                    <option value="short">MOD_JBXSLIDER_FIELD_PAGERTYPE_OPTION_SHORT</option>
+                </field>
+                <field
+                    name="pagerShortSeparator"
+                    type="text"
+                    default=" / "
+                    label="MOD_JBXSLIDER_FIELD_PAGERSHORTSEPARATOR_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_PAGERSHORTSEPARATOR_DESC" />
+                <field
+                    name="pagerSelector"
+                    type="text"
+                    default=""
+                    label="MOD_JBXSLIDER_FIELD_PAGERSELECTOR_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_PAGERSELECTOR_DESC" />
+                <field
+                    name="pagerCustom"
+                    type="text"
+                    default=""
+                    label="MOD_JBXSLIDER_FIELD_PAGERCUSTOM_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_PAGERCUSTOM_DESC" />
+                <field
+                    name="buildPager"
+                    type="text"
+                    default=""
+                    label="MOD_JBXSLIDER_FIELD_BUILDPAGER_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_BUILDPAGER_DESC" />
+            </fieldset>
+            <!-- End Slide Options -->
+            
+            <fieldset name="texts">
+                <field
+                    name="slide0_tittle"
+                    type="text"
+                    label="MOD_JBXSLIDER_FIELD_SLIDE0_TITTLE_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_SLIDE0_TITTLE_DESC" />
+                <field
+                    name="slide1_tittle"
+                    type="text"
+                    label="MOD_JBXSLIDER_FIELD_SLIDE1_TITTLE_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_SLIDE1_TITTLE_DESC" />
+                <field
+                    name="slide2_tittle"
+                    type="text"
+                    label="MOD_JBXSLIDER_FIELD_SLIDE2_TITTLE_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_SLIDE2_TITTLE_DESC" />
+                <field
+                    name="slide3_tittle"
+                    type="text"
+                    label="MOD_JBXSLIDER_FIELD_SLIDE3_TITTLE_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_SLIDE3_TITTLE_DESC" />
+                <field
+                    name="slide4_tittle"
+                    type="text"
+                    label="MOD_JBXSLIDER_FIELD_SLIDE4_TITTLE_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_SLIDE4_TITTLE_DESC" />
+                <field
+                    name="slide5_tittle"
+                    type="text"
+                    label="MOD_JBXSLIDER_FIELD_SLIDE5_TITTLE_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_SLIDE5_TITTLE_DESC" />
+                <field
+                    name="slide6_tittle"
+                    type="text"
+                    label="MOD_JBXSLIDER_FIELD_SLIDE6_TITTLE_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_SLIDE6_TITTLE_DESC" />
+                <field
+                    name="slide7_tittle"
+                    type="text"
+                    label="MOD_JBXSLIDER_FIELD_SLIDE7_TITTLE_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_SLIDE7_TITTLE_DESC" />
+                <field
+                    name="slide8_tittle"
+                    type="text"
+                    label="MOD_JBXSLIDER_FIELD_SLIDE8_TITTLE_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_SLIDE8_TITTLE_DESC" />
+                <field
+                    name="slide9_tittle"
+                    type="text"
+                    label="MOD_JBXSLIDER_FIELD_SLIDE9_TITTLE_LABEL"
+                    description="MOD_JBXSLIDER_FIELD_SLIDE9_TITTLE_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
