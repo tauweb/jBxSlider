@@ -7,7 +7,7 @@
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>whiskeyman.tau@gmail.com</authorEmail>
     <authorUrl>whiskeyman.ru</authorUrl>
-    <version>1.1.0</version>
+    <version>0.8</version>
     <description>MOD_JBXSLIDER_XML_DESCRIPTION</description>
 
     <scriptfile>script.mod_jbxslider.php</scriptfile>
@@ -81,6 +81,7 @@
                 <field
                     name="randomStart"
                     type="radio"
+                    class="btn-group"
                     default="0"
                     label="MOD_JBXSLIDER_FIELD_RANDOMSTART_LABEL"
                     description="MOD_JBXSLIDER_FIELD_RANDOMSTART_DESC" >
@@ -96,6 +97,7 @@
                 <field
                     name="infiniteLoop"
                     type="radio"
+                    class="btn-group"
                     default="1"
                     label="MOD_JBXSLIDER_FIELD_INFINITELOOP_LABEL"
                     description="MOD_JBXSLIDER_FIELD_INFINITELOOP_DESC" >
@@ -105,6 +107,7 @@
                 <field
                     name="hideControlOnEnd"
                     type="radio"
+                    class="btn-group"
                     default="0"
                     label="MOD_JBXSLIDER_FIELD_HIDECONTROLONEND_LABEL"
                     description="MOD_JBXSLIDER_FIELD_HIDECONTROLONEND_DESC" >
@@ -120,6 +123,7 @@
                 <field
                     name="captions"
                     type="radio"
+                    class="btn-group"
                     default="0"
                     label="MOD_JBXSLIDER_FIELD_CAPTIONS_LABEL"
                     description="MOD_JBXSLIDER_FIELD_CAPTIONS_DESC" >
@@ -129,6 +133,7 @@
                 <field
                     name="ticker"
                     type="radio"
+                    class="btn-group"
                     default="0"
                     label="MOD_JBXSLIDER_FIELD_TICKER_LABEL"
                     description="MOD_JBXSLIDER_FIELD_TICKER_DESC" >
@@ -138,6 +143,7 @@
                 <field
                     name="tickerHover"
                     type="radio"
+                    class="btn-group"
                     default="0"
                     label="MOD_JBXSLIDER_FIELD_TICKERHOVER_LABEL"
                     description="MOD_JBXSLIDER_FIELD_TICKERHOVER_DESC" >
@@ -147,6 +153,7 @@
                 <field
                     name="adaptiveHeight"
                     type="radio"
+                    class="btn-group"
                     default="0"
                     label="MOD_JBXSLIDER_FIELD_ADAPTIVEHEIGHT_LABEL"
                     description="MOD_JBXSLIDER_FIELD_ADAPTIVEHEIGHT_DESC" >
@@ -162,6 +169,7 @@
                 <field
                     name="video"
                     type="radio"
+                    class="btn-group"
                     default="0"
                     label="MOD_JBXSLIDER_FIELD_VIDEO_LABEL"
                     description="MOD_JBXSLIDER_FIELD_VIDEO_DESC" >
@@ -171,6 +179,7 @@
                 <field
                     name="responsive"
                     type="radio"
+                    class="btn-group"
                     default="1"
                     label="MOD_JBXSLIDER_FIELD_RESPONSIVE_LABEL"
                     description="MOD_JBXSLIDER_FIELD_RESPONSIVE_DESC" >
@@ -180,6 +189,7 @@
                 <field
                     name="useCSS"
                     type="radio"
+                    class="btn-group"
                     default="1"
                     label="MOD_JBXSLIDER_FIELD_USECSS_LABEL"
                     description="MOD_JBXSLIDER_FIELD_USECSS_DESC" >
@@ -189,6 +199,7 @@
                 <field
                     name="preloadImages"
                     type="radio"
+                    class="btn-group"
                     default="visible"
                     label="MOD_JBXSLIDER_FIELD_PRELOADIMAGES_LABEL"
                     description="MOD_JBXSLIDER_FIELD_PRELOADIMAGES_DESC" >
@@ -198,6 +209,7 @@
                 <field
                     name="touchEnabled"
                     type="radio"
+                    class="btn-group"
                     default="1"
                     label="MOD_JBXSLIDER_FIELD_TOUCHENABLED_LABEL"
                     description="MOD_JBXSLIDER_FIELD_TOUCHENABLED_DESC" >
@@ -213,6 +225,7 @@
                 <field
                     name="oneToOneTouch"
                     type="radio"
+                    class="btn-group"
                     default="1"
                     label="MOD_JBXSLIDER_FIELD_ONETOONETOUCH_LABEL"
                     description="MOD_JBXSLIDER_FIELD_ONETOONETOUCH_DESC" >
@@ -222,6 +235,7 @@
                 <field
                     name="preventDefaultSwipeX"
                     type="radio"
+                    class="btn-group"
                     default="1"
                     label="MOD_JBXSLIDER_FIELD_PREVENTDEFAULTSWIPEX_LABEL"
                     description="MOD_JBXSLIDER_FIELD_PREVENTDEFAULTSWIPEX_DESC" >
@@ -231,6 +245,7 @@
                 <field
                     name="preventDefaultSwipeY"
                     type="radio"
+                    class="btn-group"
                     default="0"
                     label="MOD_JBXSLIDER_FIELD_PREVENTDEFAULTSWIPEY_LABEL"
                     description="MOD_JBXSLIDER_FIELD_PREVENTDEFAULTSWIPEY_DESC" >
@@ -244,6 +259,7 @@
                 <field
                     name="pager"
                     type="radio"
+                    class="btn-group"
                     default="1"
                     label="MOD_JBXSLIDER_FIELD_PAGER_LABEL"
                     description="MOD_JBXSLIDER_FIELD_PAGER_DESC" >
