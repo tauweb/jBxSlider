@@ -1,5 +1,5 @@
 # jBxSlider
-jBxSlider - Is a powerful Slider for CMS Joomla 3x based on bxslider. [![Gem](https://img.shields.io/gem/dtv/rails.svg?style=flat-square)]()
+jBxSlider - Is a powerful Slider for CMS Joomla 3x based on bxslider. 
 
 ###Slider on the module position on site template
 
